@@ -1,4 +1,5 @@
-=autoloader.js=
+autoloader.js
+=============
 
 This is a javaScript loader plugin for jQuery.
 It works very similar to yepnopejs.
@@ -11,26 +12,26 @@ The plugin also offer a overall callback or option (true/false) to execute all '
 
 If bind to document.ready() will run after DOM is ready, which gives similar effect as putting scripts to the footer of the web page to speed up page content loading time.
 
-[http://code.google.com/p/jquery-autoloader/downloads/list]
 
-===Plugin in jQuery web site:===
-[http://plugins.jquery.com/project/autoloader]
 
-===Usage===
+Usage
+-----
+
 Test if jQuery UI exists. If not, load it.
 
 auotloader can be call using jquery plugin syntax:
-{{{
-$(document).autoloader({options})
-}}}
-or as jQuery method
-{{{
-$.autoLoader({options})
-}}}
 
+```javascript
+$(document).autoloader({options})
+```
+or as jQuery method
+
+```javascript
+$.autoLoader({options})
+```
 Example:
 
-{{{
+```javascript
 $(function() {
    $.autoLoader(
 	{
@@ -42,12 +43,12 @@ $(function() {
 	}
    );
 });
-}}}
+```
 
 Test cases with "depends". Note that cases no longer require to be in order.
 See case 2 will run after case 3, because case 2 depends on script from case 3.
 
-{{{
+```javascript
 	$.autoLoader([
 	{
 		test: window.first,
@@ -72,4 +73,4 @@ See case 2 will run after case 3, because case 2 depends on script from case 3.
 		}
 	}
 	]);
-}}}
+```
